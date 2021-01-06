@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import GlobalStyle from "./GlobalStyles";
 import bgMobile from "./images/background-mobile.jpg";
+import bgDesktop from "./images/background-desktop.jpg";
 import NavBar from "./components/NavBar";
 import DoughCalculator from "./components/DoughCalculator";
 import { Route, Switch } from "react-router-dom";
@@ -12,11 +13,12 @@ function App() {
   return (
     <Container>
       <GlobalStyle />
-      <NavBar />
+
       <HeroSection>
         <HeroContent>
           <h1>مدخلك إلى عالم العجين</h1>
-          <h3> تعرف على مكونات عجينتك ونسبها وطريقة إعدادها</h3>
+          <h3> تعرف على مكونات عجينتك ونسبها وطريقة تحضيرها</h3>
+          <NavBar />
         </HeroContent>
       </HeroSection>
       <Switch>
@@ -34,7 +36,9 @@ function App() {
   );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+  background: #e0d3d3;
+`;
 
 const HeroSection = styled.div`
   min-height: 40vh;
@@ -42,6 +46,11 @@ const HeroSection = styled.div`
     url(${bgMobile}) no-repeat;
   background-size: cover;
   position: relative;
+
+  @media (min-width: 700px) {
+    background: linear-gradient(rgba(46, 46, 46, 0.7), rgba(0, 0, 0, 0.7)),
+      url(${bgDesktop}) no-repeat center left;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -60,22 +69,17 @@ const HeroContent = styled.div`
     color: #d1cfcf;
     margin-bottom: 1.2rem;
   }
-`;
 
-const Button = styled.button`
-  font-size: 1.4rem;
-  cursor: pointer;
-  background: #176130;
-  color: #e3e3e3;
-  padding: 0.5rem 1.5rem;
-  outline: none;
-  border: none;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
+  @media (min-width: 700px) {
+    align-items: flex-start;
+    margin: 0 2.5rem;
 
-  .icon {
-    margin-right: 1rem;
+    h1 {
+      font-size: 5rem;
+    }
+    h3 {
+      font-size: 2.4rem;
+    }
   }
 `;
 export default App;

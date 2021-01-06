@@ -26,6 +26,16 @@ const GlobalStyle = createGlobalStyle`
     }
     p{
         font-size:1.4rem;
+
+        @media (min-width:700px){
+            font-size:1.6rem;
+        }
+    }
+    small{
+        font-size:1.2rem
+        @media (min-width:700px){
+            font-size:1.4rem;
+        }
     }
     input,textarea,button{
         font-family:inherit;

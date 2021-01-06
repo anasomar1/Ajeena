@@ -115,14 +115,20 @@ const DoughCalculator = () => {
 const StyledDoughCalculator = styled.div`
   margin-top: 3rem;
   display: flex;
-  padding: 0 1.5rem;
+  padding: 0 2.5rem;
 
   justify-content: space-between;
   align-items: center;
   min-height: 30vh;
 `;
 
-const CalculatorContent = styled.div``;
+const CalculatorContent = styled.div`
+  @media (min-width: 700px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+`;
 
 const StyledInput = styled.div`
   display: flex;
@@ -148,11 +154,11 @@ const Button = styled.button`
   cursor: pointer;
   background: #176130;
   color: #e3e3e3;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 2.5rem;
   outline: none;
   border: none;
   border-radius: 1rem;
-  margin: 1rem 0;
+  margin: 2rem 0 1rem 0;
 
   &:hover {
     background: #19552d;
@@ -160,6 +166,10 @@ const Button = styled.button`
 
   &:active {
     transform: scale(0.98);
+  }
+
+  @media (min-width: 600px) {
+    width: 50%;
   }
 `;
 
@@ -174,14 +184,14 @@ const Form = styled.form`
 `;
 
 const Information = styled.ul`
-  margin: 1rem 0;
   padding: 1rem;
   list-style: none;
 
   width: 100%;
   li {
     font-weight: bold;
-    font-size: 1.5rem;
+    line-height: 1.5;
+    font-size: 1.6rem;
   }
   small {
     font-weight: normal;
