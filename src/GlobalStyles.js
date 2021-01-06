@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-
 const GlobalStyle = createGlobalStyle`
     *{
     margin: 0;
@@ -10,7 +9,8 @@ const GlobalStyle = createGlobalStyle`
         font-size:10px;
     }
     body{
-        font-family:Arial, Helvetica, sans-serif;
+        font-family: 'Tajawal', sans-serif;
+        overflow-x:hidden;
     }
 
     h1{
@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     }
     h2{
         font-size: 2rem;
+        margin-bottom:1rem;
     }
     h3{
         font-size:1.6rem;
