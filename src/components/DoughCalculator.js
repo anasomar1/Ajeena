@@ -23,11 +23,15 @@ const DoughCalculator = () => {
     }
   };
 
-  const submitHandler = async (e) => {
+  const submitHandler = (e) => {
     e.preventDefault();
-    await setFlour(
-      (doughBalls * doughWeight) / (1 + waterPercentage / 100 + 0.02 + 0.008)
-    );
+    if (doughBalls && doughWeight && waterPercentage) {
+      setFlour(
+        (doughBalls * doughWeight) / (1 + waterPercentage / 100 + 0.02 + 0.008)
+      );
+    } else {
+      alert("رجاءً قم بإدخال كافة المعلومات");
+    }
   };
 
   useEffect(() => {
