@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import scaleImg from "../images/scale-desktop.jpg";
 import styled from "styled-components";
 
 const DoughCalculator = () => {
