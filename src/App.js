@@ -6,7 +6,6 @@ import bgDesktop from "./images/background-desktop.jpg";
 import NavBar from "./components/NavBar";
 import DoughCalculator from "./components/DoughCalculator";
 import { Route, Switch } from "react-router-dom";
-import Contact from "./components/Contact";
 import Recipes from "./components/Recipes";
 
 function App() {
@@ -28,9 +27,6 @@ function App() {
         <Route exact path="/recipes">
           <Recipes />
         </Route>
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
       </Switch>
     </Container>
   );
@@ -50,6 +46,10 @@ const HeroSection = styled.div`
   @media (min-width: 700px) {
     background: linear-gradient(rgba(46, 46, 46, 0.7), rgba(0, 0, 0, 0.7)),
       url(${bgDesktop}) no-repeat center left;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 

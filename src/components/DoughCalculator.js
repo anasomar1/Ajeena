@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import scaleImg from "../images/scale-desktop.jpg";
 import styled from "styled-components";
 
 const DoughCalculator = () => {
@@ -64,7 +65,7 @@ const DoughCalculator = () => {
           <StyledInput>
             <input
               placeholder="200"
-              min="100"
+              min="150"
               step="10"
               type="number"
               id="dough-weight"
@@ -77,7 +78,7 @@ const DoughCalculator = () => {
             </label>
           </StyledInput>
           <p className="extra-info">
-            حيث أنّ 200 غرام هو حجم البيتزا الصغيرة و300 غرام هو حجم البيتزا
+            حيث أنّ 200 غرام هو حجم البيتزا الصغيرة و 300 غرام هو حجم البيتزا
             الكبيرة
           </p>
           <StyledInput>
@@ -112,6 +113,7 @@ const DoughCalculator = () => {
           <li>خميرة : {yeast.toFixed(1)} غرام</li>
         </Information>
       </CalculatorContent>
+      <div className="linear-line"></div>
     </StyledDoughCalculator>
   );
 };
@@ -121,12 +123,13 @@ const StyledDoughCalculator = styled.div`
   display: flex;
   padding: 0 2.5rem;
 
-  justify-content: space-between;
-  align-items: center;
   min-height: 30vh;
 `;
 
 const CalculatorContent = styled.div`
+  small {
+    font-size: 1.4rem;
+  }
   @media (min-width: 700px) {
     h2 {
       font-size: 3rem;
@@ -183,7 +186,7 @@ const Form = styled.form`
   padding: 1rem;
 
   .extra-info {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 `;
 
@@ -199,6 +202,7 @@ const Information = styled.ul`
   }
   small {
     font-weight: normal;
+    font-size: 1.4rem;
   }
 `;
 

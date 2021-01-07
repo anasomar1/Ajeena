@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
         font-size:1.4rem;
 
         @media (min-width:700px){
-            font-size:1.6rem;
+            font-size:1.8rem;
         }
     }
     small{

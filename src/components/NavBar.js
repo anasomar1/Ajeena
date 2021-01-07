@@ -12,9 +12,6 @@ const DoughBar = () => {
         <li>
           <Link to="/recipes">طريقة التحضير</Link>
         </li>
-        <li>
-          <Link to="/contact">تواصل معنا</Link>
-        </li>
       </ul>
     </StyledNavBar>
   );
@@ -50,7 +47,7 @@ const StyledNavBar = styled.nav`
     }
   }
   @media (min-width: 700px) {
-    justify-content: flex-start;
+    justify-content: center;
 
     ul a {
       font-size: 2rem;
