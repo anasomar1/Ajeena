@@ -145,8 +145,9 @@ const StyledInput = styled.div`
     outline: none;
     border: none;
     border-radius: 1rem;
-    background: #e0e0e0;
-    margin: 1rem 0 2rem 1rem;
+    background: #fafafa;
+    font-size: 1.4rem;
+    margin: 1rem 0 2rem 2rem;
   }
 
   label {

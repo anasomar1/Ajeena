@@ -6,7 +6,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing:border-box;
     }
     html{
-        font-size:10px;
+        font-size:12px;
+        
     }
     body{
         font-family: 'Tajawal', sans-serif;
